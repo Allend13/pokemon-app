@@ -1,8 +1,5 @@
-import {
-    Card,
-    CardContent,
-} from "@/components/ui/card"
 import { getPokemonsList } from "@/api/pokemons/api";
+import { PokemonCard } from "./PokemonCard";
 
 export const PokemonsResult= () => {
     const pokemons = getPokemonsList()
@@ -10,11 +7,7 @@ export const PokemonsResult= () => {
     return (
         <div className="flex flex-wrap">
             {pokemons.map(pokemonItem => (
-                <Card key={pokemonItem.url}>
-                    <CardContent>
-                        {pokemonItem.name}
-                    </CardContent>
-                </Card>
+                <PokemonCard key={pokemonItem.details.id} pokemon={pokemonItem} />
             ))}
         </div>
     )

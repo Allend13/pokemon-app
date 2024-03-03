@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input"
 
 export const PokemonsSearch = () => {
     return (
-        <div className="pb-12 flex items-center bg-primary">
+        <div className="pb-12 flex items-center">
             <div className="mr-8 pr-6">
                 <h3 className="text-2xl font-semibold">
                     Search

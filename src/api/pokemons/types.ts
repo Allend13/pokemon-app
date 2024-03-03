@@ -3,6 +3,12 @@ export type PokemonListItem = {
     url: string,
 }
 
+export type PokemonDetailedItem = {
+    name: string,
+    url: string,
+    details: Pokemon,
+}
+
 export type Pokemon = {
     abilities: Ability[];
     base_experience: number;
