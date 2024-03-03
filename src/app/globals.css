@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --Backgrounds-01: hsl(187, 31%, 5%, 1);
+    --Backgrounds-02: hsl(190, 32%, 10%, 1);
+    --Backgrounds-03: hsl(192, 35%, 15%, 1);
+    --Backgrounds-04: hsl(190, 29%, 20%, 1);
+
+    --ObolGreen-Mid: hsl(161, 77%, 54%, 1);
+    --ObolGreen-Light: hsl(161, 75%, 72%, 1);
+
+    --Text-Body: hsl(190, 30%, 70%, 1);
+    --Text-Dark: var(--Backgrounds-01);
+    --Text-Light: hsl(190, 50%, 90%, 1);
+    --Text-Muted: hsl(192, 17%, 34%, 1);
+
+    --background: var(--Backgrounds-01);
+    --foreground: var(--Text-Light);
+
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(240 10% 3.9%);
+
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(240 10% 3.9%);
+
+    --primary: var(--ObolGreen-Mid);
+    --primary-foreground: var(--Text-Dark);
+
+    --primary-hover: hsl(161, 75%, 72%, 1);
+    --primary-foreground-hover: hsl(191, 91%, 20%, 1);
+
+    --secondary: var(--Backgrounds-03);
+    --secondary-foreground: var(--Text-Light);
+
+    --muted: var(--Text-Body);
+    --muted-foreground: hsl(240 3.8% 46.1%);
+
+    --accent: var(--Text-Light);
+    --accent-foreground: hsl(240 5.9% 10%);
+
+    --border: var(--Backgrounds-04);
+    --input: var(--Backgrounds-02);
+    --ring: hsl(240 10% 3.9%);
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground text-foreground;
+  }
+}
