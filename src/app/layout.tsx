@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
+import { WagmiProvider } from './providers/WagmiProvider'
+import { QueryProvider } from './providers/QueryProvider'
 import { Header } from '@/components/Header'
 import { Content } from '@/components/Content'
 
@@ -21,11 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dmSans.className}>
-        <Header />
+        <QueryProvider>
+          <WagmiProvider>
+            <Header />
 
-        <Content>
-          {children}
-        </Content>
+            <Content>
+              {children}
+            </Content>
+          </WagmiProvider>
+        </QueryProvider>
       </body>
     </html>
   );
