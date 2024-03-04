@@ -14,12 +14,12 @@ export const PokemonCard = ({ pokemon } : PokemonCardProps) => {
             <CardHeader className="h-[222px] bg-card rounded-t-lg flex justify-center items-center">
                 <Image src={pokemon.details.sprites.front_default} alt={pokemon.name} width="100" height="100"/>
             </CardHeader>
-            <CardContent className="p-8 flex flex-col items-center gap-y-8">
+            <CardContent className="p-8 flex flex-col items-center justify-between gap-y-8">
                 <div>
                     <div className="text-secondary-foreground text-center text-lg mb-2">
                         {formattedName}
                     </div>
-                    <div className="text-muted text-lg text-center">
+                    <div className="text-muted text-lg text-center h-20">
                         {pokemon.details.abilities.slice(0,3).map((ability) => (
                             <div key={ability.ability.url}>
                                 {ability.ability.name}

@@ -1,8 +1,8 @@
 import { getPokemonsList } from "@/api/pokemons/api";
 import { PokemonCard } from "./PokemonCard";
 
-export const PokemonsResult= () => {
-    const pokemons = getPokemonsList()
+export const PokemonsResult = async () => {
+    const pokemons = await getPokemonsList()
 
     return (
         <div className="grid grid-cols-3 gap-x-[47.5px] gap-y-[37px]">
