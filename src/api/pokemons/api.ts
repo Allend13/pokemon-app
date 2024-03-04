@@ -24,7 +24,7 @@ type QueryParamsStringified = {
 //TODO: NOTICE FOR REVIEW:
 // Better create Apollo GraphQL BFF with caching for aggregating data,
 // but leaving for simplicity REST in NextJS
-export const getPokemonsList = async ({ search, offset = 0, limit = 20 }: QueryParams): Promise<PokemonDetailedItem[]> => {
+export const getPokemonsList = async ({ search, offset = 0, limit = 21 }: QueryParams): Promise<PokemonDetailedItem[]> => {
     const searchParamsObj: QueryParamsStringified = { offset: `${offset}`, limit: `${limit}` }
     if (search) searchParamsObj['search'] = search
 

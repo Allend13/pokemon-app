@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 
 import {
@@ -5,12 +6,13 @@ import {
     CardContent,
     CardHeader,
 } from "@/components/ui/card"
-import { Button } from "@/components/ui/button";
 import { PokemonCardProps } from "./types";
-import {PokemonDialog} from "@/app/components/PokemonsResult/PokemonCard/PokemonDialog";
+import { PokemonDialog } from "@/app/components/PokemonsResult/PokemonCard/PokemonDialog";
+import {CollectButton} from "@/app/components/PokemonsResult/PokemonCard/CollectButton";
 
 export const PokemonCard = ({ pokemon } : PokemonCardProps) => {
     const formattedName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
     return (
         <Card className="w-[395px] bg-secondary border-none">
             <CardHeader className="h-[222px] bg-card rounded-t-lg flex justify-center items-center">
@@ -30,7 +32,7 @@ export const PokemonCard = ({ pokemon } : PokemonCardProps) => {
                     </div>
                 </div>
                 <div>
-                    <Button className="h-12 px-6 text-base">Collect</Button>
+                   <CollectButton />
                 </div>
                 <PokemonDialog pokemon={pokemon} />
             </CardContent>

@@ -7,8 +7,7 @@ const Home = async ({ searchParams }: {
   searchParams?: { query?: string }
 }) => {
   const search = searchParams?.[QUERY_KEY] || ""
-  const limit = 20
-  const pokemons = await getPokemonsList({ search, limit })
+  const pokemons = await getPokemonsList({ search  })
 
   return (
       <>

@@ -6,6 +6,7 @@ import { WagmiProvider } from './providers/WagmiProvider'
 import { QueryProvider } from './providers/QueryProvider'
 import { Header } from '@/components/Header'
 import { Content } from '@/components/Content'
+import { Toaster } from "@/components/ui/toaster"
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -29,6 +30,8 @@ export default function RootLayout({
             <Content>
               {children}
             </Content>
+
+            <Toaster />
           </WagmiProvider>
         </QueryProvider>
       </body>

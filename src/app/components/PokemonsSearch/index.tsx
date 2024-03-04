@@ -4,9 +4,9 @@ import { ChangeEvent, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useDebounce } from "react-use";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"
 import  { QUERY_KEY } from "@/api/pokemons/constants";
+import { SearchButton } from "./SearchButton";
 
 const DEBOUNCE_SEARCH_TIMEOUT = 200
 
@@ -42,7 +42,7 @@ export const PokemonsSearch = () => {
                 <Input style={{ minWidth: 635 }} onChange={handleSearch} />
             </div>
             <div className="mr-8">
-                <Button>Search</Button>
+                <SearchButton />
             </div>
         </div>
     )
