@@ -1,7 +1,21 @@
-import { PokemonsList } from "./components/PokemonsList";
+import { PokemonsSearch } from "./components/PokemonsSearch";
+import { PokemonsResult } from "./components/PokemonsResult";
+import { QUERY_KEY } from "@/api/pokemons/constants";
+import {getPokemonsList} from "@/api/pokemons/api";
 
-export default function Home() {
+const Home = async ({ searchParams }: {
+  searchParams?: { query?: string }
+}) => {
+  const search = searchParams?.[QUERY_KEY] || ""
+  const limit = 20
+  const pokemons = await getPokemonsList({ search, limit })
+
   return (
-      <PokemonsList />
+      <>
+        <PokemonsSearch />
+        <PokemonsResult pokemons={pokemons} />
+      </>
   );
 }
+
+export default Home

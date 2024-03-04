@@ -1,9 +1,12 @@
-import { PokemonsSearch } from './PokemonsSearch'
+import { PokemonCard } from "./PokemonCard";
+import { PokemonsResultProps } from "./types";
 
-export const PokemonsList = () => {
+export const PokemonsResult = ({ pokemons }: PokemonsResultProps) => {
     return (
-        <>
-            <PokemonsSearch />
-        </>
+        <div className="grid grid-cols-3 gap-x-[47.5px] gap-y-[37px]">
+            {pokemons.map(pokemonItem => (
+                <PokemonCard key={pokemonItem.details.id} pokemon={pokemonItem}/>
+            ))}
+        </div>
     )
 }

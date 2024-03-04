@@ -1,11 +1,13 @@
+import Image from "next/image";
+
 import {
     Card,
-    CardContent, CardHeader,
+    CardContent,
+    CardHeader,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import { PokemonCardProps } from "./types";
-import Image from "next/image";
-import {PokemonDialog} from "@/app/components/PokemonsList/PokemonsResult/PokemonCard/PokemonDialog";
+import {PokemonDialog} from "@/app/components/PokemonsResult/PokemonCard/PokemonDialog";
 
 export const PokemonCard = ({ pokemon } : PokemonCardProps) => {
     const formattedName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);

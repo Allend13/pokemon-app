@@ -4,9 +4,9 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import Image from "next/image";
-import arrow from "@/app/components/PokemonsList/PokemonsResult/PokemonCard/assets/arrow.svg";
+import arrow from "@/app/components/PokemonsResult/PokemonCard/assets/arrow.svg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { PokemonCardProps } from "@/app/components/PokemonsList/PokemonsResult/PokemonCard/types";
+import { PokemonCardProps } from "@/app/components/PokemonsResult/PokemonCard/types";
 
 export const PokemonDialog = ({ pokemon } : PokemonCardProps) => {
     const formattedName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
